@@ -1,0 +1,205 @@
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" 
+src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
+</script>
+<link href=  "/plugins/code-theme/tomorrow-night.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="/plugins/github-markdown.css">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+  
+    
+    
+      <link rel="stylesheet" href="/css/legend.css">
+    
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body id="body-x">
+<div id="layout-content">
+  
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<div id="menu-outer-x">
+  <div id="menu-inner">
+    
+    
+    <div id="site-title">
+      涛之雨的小站
+    </div>
+    
+
+     
+    <div>
+    
+      
+      <a href="/">首页</a>
+      
+    
+      
+      <a href="/chaoxing">chaoxing脚本</a>
+      
+    
+    </div>
+  </div>
+</div> 
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  <article class="markdown-body">
+    <h2 id="post-title">Chaoxing油猴插件辅助脚本
+      
+    </h2>
+    <!-- toc -->
+
+<h1 id="chaoxing网课油猴插件辅助脚本发布（仅供内部测试使用）"><a href="#chaoxing网课油猴插件辅助脚本发布（仅供内部测试使用）" class="headerlink" title="chaoxing网课油猴插件辅助脚本发布（仅供内部测试使用）"></a>chaoxing网课油猴插件辅助脚本发布（仅供内部测试使用）</h1><h2 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h2><h3 id="课件"><a href="#课件" class="headerlink" title="课件"></a>课件</h3><p><img src="./pdf.png" alt="课程示意图"></p>
+<ol>
+<li>翻页限制时间改为1s</li>
+</ol>
+<ul>
+<li>本人学校时间比1min多了不少。。。</li>
+<li>一开始还以为网页版不能翻页呢。。。</li>
+</ul>
+<ol start="2">
+<li>增加三个按钮/文本框<code>第一页</code>/<code>最后一页</code>/<code>跳转到指定页数</code>，方便继续上一次的学习</li>
+</ol>
+<ul>
+<li>直接跳到最后一页不会影响完成任务。。。但是不如看完增长知识是不是</li>
+</ul>
+<h3 id="视频-包括拓展部分视频"><a href="#视频-包括拓展部分视频" class="headerlink" title="视频(包括拓展部分视频)"></a>视频(包括拓展部分视频)</h3><p><img src="./video.png" alt="视频"></p>
+<ol>
+<li>解除鼠标移出自动暂停</li>
+</ol>
+<ul>
+<li>方便做笔记</li>
+</ul>
+<ol start="2">
+<li>允许倍速播放</li>
+</ol>
+<ul>
+<li>方便刷课</li>
+</ul>
+<ol start="3">
+<li>允许拖拽视频</li>
+</ol>
+<ul>
+<li>方便快速回到上一次学习的位置</li>
+</ul>
+<h3 id="测试允许粘贴"><a href="#测试允许粘贴" class="headerlink" title="测试允许粘贴"></a>测试允许粘贴</h3><p><img src="./test.png" alt="测试允许粘贴"></p>
+<blockquote>
+<p>多处重复的可以快速答完</p>
+</blockquote>
+<h2 id="安装及使用方法："><a href="#安装及使用方法：" class="headerlink" title="安装及使用方法："></a>安装及使用方法：</h2><h3 id="安装油猴插件（tampermonkey）。"><a href="#安装油猴插件（tampermonkey）。" class="headerlink" title="安装油猴插件（tampermonkey）。"></a>安装油猴插件（tampermonkey）。</h3><p> 网上可以搜到，如果还是不会可以参考<a href="../tampermonkey">【这里】</a><br>如下图，搜集了现在各常见的浏览器安装插件的链接&amp;是否支持之类的消息。<br> <img src="./git.png" alt="git图片"></p>
+<blockquote>
+<p>墙裂推荐Chrome，谷歌原生的浏览器。</p>
+</blockquote>
+<h3 id="添加脚本。"><a href="#添加脚本。" class="headerlink" title="添加脚本。"></a>添加脚本。</h3><p>电脑上，安装了插件的浏览器打开下面的链接，输入密码后即可安装完成</p>
+<blockquote>
+<p>链接：<a href="http://suo.im/6rAmEV" target="_blank" rel="noopener">http://suo.im/6rAmEV</a>，密码：<code>fuckcx</code>（区分大小写）</p>
+</blockquote>
+<h3 id="更新。"><a href="#更新。" class="headerlink" title="更新。"></a>更新。</h3><p>虽然我几乎不会更新。。。<br>万一更新了呢是不是。。。。<br>所以！<br>添加了<strong>自动检查更新</strong>的模式，按照您插件的设置（默认是每天）<br>如果检测到有更新，会自动弹出窗口<br><img src="./update.png" alt="更新提醒"><br>您要做的就是点击<strong>【更新】</strong>就会自动更新成为最新版本。<br>当然，您也可以查看一下有什么更新内容（为了防止代码被恶意篡改），此版本非开源版。如果需要研究请联系本人。</p>
+
+  </article>
+
+  
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<script> 
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<div id="bottom-outer">
+  
+  <div id="bottom-inner">
+    涛之雨 
+    ©2020 |Powered by  
+    <a href="http://hexo.io" target="_blank">Hexo</a> with theme 
+    <a href="https://github.com/iHongRen/legend" target="_blank">legend-master</a>
+  </div>
+    
+    
+     
+
+
+  
+  
+    <script src="/js/legend.js"></script>
+  
+
+
+</body>
+</html>
+
+
+<script>
+$(window).on('load', function(){
+   $('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
+   prettyPrint();
+ });
+</script>
+
+
+
+<div id="social-about">
+<script> 
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	} 
+</script>
+
+
+
+</div>
+
+
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>

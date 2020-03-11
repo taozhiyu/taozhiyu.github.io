@@ -1,0 +1,229 @@
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" 
+src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
+</script>
+<link href=  "/plugins/code-theme/tomorrow-night.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="/plugins/github-markdown.css">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+  
+    
+    
+      <link rel="stylesheet" href="/css/legend.css">
+    
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body id="body-x">
+<div id="layout-content">
+  
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<div id="menu-outer-x">
+  <div id="menu-inner">
+    
+    
+    <div id="site-title">
+      涛之雨的小站
+    </div>
+    
+
+     
+    <div>
+    
+      
+      <a href="/">首页</a>
+      
+    
+      
+      <a href="/chaoxing">chaoxing脚本</a>
+      
+    
+    </div>
+  </div>
+</div> 
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  <article class="markdown-body">
+    <h2 id="post-title">安装Tampermonkey的注意事项
+      
+    </h2>
+    <h1 id="安装【Tampermonkey】"><a href="#安装【Tampermonkey】" class="headerlink" title="安装【Tampermonkey】"></a>安装【Tampermonkey】</h1><p>Q：什么是Tampermonkey？</p>
+<p>A：Tampermonkey，俗称“油猴”，是一款在览器上运行和管理脚本的插件。所谓脚本就是一段代码，它们能够优化您的网页浏览体验。安装之后，有些脚本能为网站添加新的功能，有些能使网站的界面更加易用，有些则能隐藏网站上烦人的部分内容。</p>
+<h2 id="前往浏览器扩展中心安装-Tampermonkey-或暴力猴"><a href="#前往浏览器扩展中心安装-Tampermonkey-或暴力猴" class="headerlink" title="前往浏览器扩展中心安装 Tampermonkey 或暴力猴"></a><strong>前往浏览器扩展中心安装 Tampermonkey 或暴力猴</strong></h2><table>
+<thead>
+<tr>
+<th align="center">浏览器</th>
+<th align="center">安装地址</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">360极速浏览器</td>
+<td align="center"><a href="https://ext.chrome.360.cn/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">扩展商店地址</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">360安全浏览器</td>
+<td align="center"><a href="https://ext.chrome.360.cn/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">扩展商店地址</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">QQ浏览器</td>
+<td align="center"><a href="qqbrowser://extensions/search?key=Tampermonkey">扩展商店地址</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">UC浏览器</td>
+<td align="center"><a href="https://download.se.360.cn/ext/Tampermonkey_4.9_dhdgffkkebhmkfjojejmpbldmpobfkfo.crx" target="_blank" rel="noopener">下载安装</a></td>
+<td align="center">离线下载，手动安装</td>
+</tr>
+<tr>
+<td align="center">遨游浏览器</td>
+<td align="center"><a href="http://extension.maxthon.cn/detail/index.php?view_id=1680&amp;category_id=10" target="_blank" rel="noopener">扩展商店地址</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Chrome浏览器</td>
+<td align="center"><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">扩展商店地址</a></td>
+<td align="center">需要科学上网，或<a href="https://download.se.360.cn/ext/Tampermonkey_4.9_dhdgffkkebhmkfjojejmpbldmpobfkfo.crx" target="_blank" rel="noopener">离线下载</a></td>
+</tr>
+<tr>
+<td align="center">火狐浏览器</td>
+<td align="center"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey" target="_blank" rel="noopener">扩展商店地址</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Microsoft Edge</td>
+<td align="center"><a href="https://www.microsoft.com/store/p/tampermonkey/9nblggh5162s" target="_blank" rel="noopener">扩展商店地址</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Internet Explorer</td>
+<td align="center">不支持</td>
+<td align="center">都0202年了还有人用IE？</td>
+</tr>
+<tr>
+<td align="center">其他Google内核浏览器</td>
+<td align="center"><a href="https://download.se.360.cn/ext/Tampermonkey_4.9_dhdgffkkebhmkfjojejmpbldmpobfkfo.crx" target="_blank" rel="noopener">下载安装</a></td>
+<td align="center">离线下载，手动安装</td>
+</tr>
+<tr>
+<td align="center">360极速浏览器</td>
+<td align="center"><a href="https://ext.chrome.360.cn/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">扩展商店地址</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>可直接在以上应用商店直接安装使用，不能安装的请下载离线版，安装离线看下面方法</p>
+<p><a href="https://jingyan.baidu.com/article/4d58d541482f289dd4e9c0d5.html" target="_blank" rel="noopener">点击查看谷歌内核浏览器tampermonkey插件离线安装方法
+</a></p>
+<p>安装成功后浏览器扩展栏将出现</p>
+<p><img src="./tamp.png" alt="扩展样式"></p>
+<p>点击管理面板即可看到当前的插件版本</p>
+
+  </article>
+
+  
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<script> 
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<div id="bottom-outer">
+  
+  <div id="bottom-inner">
+    涛之雨 
+    ©2020 |Powered by  
+    <a href="http://hexo.io" target="_blank">Hexo</a> with theme 
+    <a href="https://github.com/iHongRen/legend" target="_blank">legend-master</a>
+  </div>
+    
+    
+     
+
+
+  
+  
+    <script src="/js/legend.js"></script>
+  
+
+
+</body>
+</html>
+
+
+<script>
+$(window).on('load', function(){
+   $('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
+   prettyPrint();
+ });
+</script>
+
+
+
+<div id="social-about">
+<script> 
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	} 
+</script>
+
+
+
+</div>
+
+
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>

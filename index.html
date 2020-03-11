@@ -1,0 +1,219 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" 
+src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
+</script>
+<link href=  "/plugins/code-theme/tomorrow-night.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="/plugins/github-markdown.css">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+  
+    
+    
+      <link rel="stylesheet" href="/css/legend.css">
+    
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body id="body-home-bg">
+<div id="layout-content">
+  
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<div id="menu-outer-home">
+  <div id="menu-inner">
+    
+    
+    <div id="site-title">
+      涛之雨的小站
+    </div>
+    
+
+     
+    <div>
+    
+      
+      <a href="/">首页</a>
+      
+    
+      
+      <a href="/chaoxing">chaoxing脚本</a>
+      
+    
+    </div>
+  </div>
+</div> 
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  
+
+<video id="bgvideo" playsinline loop poster=/images/background.png>
+  <source type="video/mp4">
+</video>
+
+
+
+
+  
+<script> 
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	} 
+</script>
+<div id="play-button" >
+  <img id="play-img" src="/images/playback_pause.png"></img>
+</div>
+<audio id="bgaudio" loop="loop" preload="none"> 
+  <source type="audio/mpeg">
+</audio>
+
+<script>
+$("#bgaudio")[0].children[0].src="https://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.m4a?v="+new Date().getTime();
+$("#bgaudio")[0].play();
+$(document).ready(function(){
+  //播放按钮点击
+  var audio = $("#bgaudio")[0];
+  var img = $("#play-img")[0];
+  $("#play-button").click(function(){ 
+    if (audio.paused || audio.ended) {
+      audio.play();
+      img.src = "/images/playback_pause.png";
+    } else {
+      audio.pause();
+      img.src = "/images/playback_play.png";
+    }
+  });
+});
+</script>
+
+
+
+
+<!--[if lt IE 9]>
+<script>
+	document.createElement('video');
+</script>
+<![endif]-->
+
+
+<script>
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+$("#bgvideo")[0].children[0].src="https://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.mp4?v="+new Date().getTime();
+$("#bgvideo")[0].play();
+$(document).ready(function(){
+  
+  //判断是否该显示’关于我‘
+  if( "menu_about"  == 'home_about') {
+    $("#about-me").hide(0);
+
+    //加载about(关于)读取文件
+    var s = $('article').html();
+    if (s.length < 2) {
+      var url = window.location.protocol+"//"+window.location.host+"/about/";
+      $.ajax({ 
+          type: "GET", 
+          url: url, 
+          dataType: "html", 
+          success: function (data) { 
+            $('article').html($(data).find('article').html());//解析about的html
+            $("#about-me").css({"visibility": "visible"}).delay(100);
+            $("#about-me").slideToggle('slow');
+          }
+      }); 
+      }
+
+    //个人按钮点击，隐藏和显示关于界面
+    $("#me-button").click(function(){ 
+      $("#social-div").slideToggle();
+      $("#about-me").slideToggle();
+    });
+  }
+});
+</script>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<script> 
+	var tmpTag = 'https:' == document.location.protocol ? false : true;
+	if(tmpTag){
+		var urls=window.location.href;
+		urls = urls.replace("http", "https");
+		window.location=urls;
+	}
+
+</script>
+<div id="bottom-outer">
+  
+  <div id="bottom-inner">
+    涛之雨 
+    ©2020 |Powered by  
+    <a href="http://hexo.io" target="_blank">Hexo</a> with theme 
+    <a href="https://github.com/iHongRen/legend" target="_blank">legend-master</a>
+  </div>
+    
+    
+     
+
+
+  
+  
+    <script src="/js/legend.js"></script>
+  
+
+
+</body>
+</html>
+
+
+<script>
+$(window).on('load', function(){
+   $('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
+   prettyPrint();
+ });
+</script>
+

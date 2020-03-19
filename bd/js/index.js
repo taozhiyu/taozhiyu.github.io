@@ -99,7 +99,7 @@ $(document).ready(function() {
         // 参数不为空时呈现动态
         // 更新输入框与提示框内容
         $("#search-input").val("");
-        $("#tip1").text("你可知道\"调戏程序，皮断腿，是怎么被打死的\"");
+        $("#tip1").text("你可知道\""+query+"\"");
         $("#tip2").text("让我告诉你吧");
         // 获取输入框与按钮的位置
         input_offest = $("#search-input").offset();

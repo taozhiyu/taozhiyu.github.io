@@ -1,0 +1,239 @@
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" 
+src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
+</script>
+<link href=  "/plugins/code-theme/tomorrow-night.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="/plugins/github-markdown.css">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+  <title>
+  某相机的使用|
+  
+  涛之雨的小站</title>
+  
+    
+    
+      <link rel="stylesheet" href="/css/legend.css">
+    
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body id="body-x">
+<div id="layout-content">
+  
+<div id="menu-outer-x">
+  <div id="menu-inner">
+    
+    
+    <div id="site-title">
+      涛之雨的小站
+    </div>
+    
+
+     
+    <div>
+    
+      
+      <a href="/">首页</a>
+      
+    
+      
+      <a href="/chaoxing">chaoxing脚本</a>
+      
+    
+    </div>
+  </div>
+</div> 
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  <article class="markdown-body">
+    <h2 id="post-title">某相机的使用
+      
+    </h2>
+    <div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#0-ji-chu-zhi-shi">〇、基础知识</a></li>
+<li><a href="#yi-zhun-bei-gong-zuo">一、准备工作</a><ul>
+<li><a href="#cha-ke-he-qian-ming-yan-zheng">查壳和签名验证</a></li>
+<li><a href="#guan-jian-ci-bu-ju-shai-xuan">关键词/布局筛选</a></li>
+</ul>
+</li>
+<li><a href="#xiu-gai-vip">修改VIP</a><ul>
+<li><a href="#zhao-dao-bu-ju">找到布局</a></li>
+<li><a href="#zhao-guan-jian-pan-duan">找关键判断</a></li>
+<li><a href="#chang-shi-xiu-gai">尝试修改</a></li>
+<li><a href="#ce-shi-xiao-guo">测试效果</a></li>
+</ul>
+</li>
+<li><a href="#qu-nei-gou">去内购</a><ul>
+<li><a href="#que-ding-cuo-wu-dan-chuang-wei-zhi">确定错误弹窗位置</a></li>
+<li><a href="#fen-xi-pan-duan">分析判断</a></li>
+<li><a href="#yi-ci-xiu-gai">依次修改</a></li>
+</ul>
+</li>
+<li><a href="#fu-jian">附件</a><ul>
+<li><a href="#mthook-hou-de-wen-jian">mtHOOK后的文件</a></li>
+<li><a href="#yuan-bao">原包</a></li>
+<li><a href="#xiu-gai-hou-de-demo">修改后的demo</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><a href="#0-ji-chu-zhi-shi" class="header-anchor">☺</a><span id="0-ji-chu-zhi-shi">〇、基础知识</span></h1><ul>
+<li><a href="https://bbs.binmt.cc/thread-16466-1-1.html" target="_blank" rel="noopener">mt管理器基本操作</a></li>
+<li><a href="https://blog.csdn.net/dd864140130/article/details/52076515" target="_blank" rel="noopener"><code>smali</code>的基本语法</a></li>
+<li>mt的VIP账号(*选)</li>
+</ul>
+<h1><a href="#yi-zhun-bei-gong-zuo" class="header-anchor">☺</a><span id="yi-zhun-bei-gong-zuo">一、准备工作</span></h1><h2><a href="#cha-ke-he-qian-ming-yan-zheng" class="header-anchor">☺</a><span id="cha-ke-he-qian-ming-yan-zheng">查壳和签名验证</span></h2><p>软件无壳。<br>安装原包，正常。<br>直接签名后安装，发现闪退。<br>应该是签名验证，使用mt一键hook签名验证</p>
+<blockquote>
+<p>如果没有会员也可以尝试用四哥的<a href="https://github.com/fourbrother/kstools" target="_blank" rel="noopener">kstools</a>（未经测试）<br>这里提供mt一键hook后<a href="#Attachment">被更改的文件</a>，解压后直接复制到apk签名即可过签名验证</p>
+</blockquote>
+<p>hook签名后打开正常。</p>
+<h2><a href="#guan-jian-ci-bu-ju-shai-xuan" class="header-anchor">☺</a><span id="guan-jian-ci-bu-ju-shai-xuan">关键词/布局筛选</span></h2><p>查看可能作为判断依据的内容：<br><img src="./1.png" alt="吾爱破解 - 涛之雨"></p>
+<p>上图左：<code>升级到会员的提示</code><br>上图右：<code>订阅会员解锁和右下角的会员表示</code></p>
+<h1><a href="#xiu-gai-vip" class="header-anchor">☺</a><span id="xiu-gai-vip">修改VIP</span></h1><h2><a href="#zhao-dao-bu-ju" class="header-anchor">☺</a><span id="zhao-dao-bu-ju">找到布局</span></h2><p>以<code>升级到会员</code>为例<br>如下图左，在<code>ares</code>资源文件搜索关键词<br><img src="./2.png" alt="吾爱破解 - 涛之雨"><br>如上图中，在<code>xml</code>中搜索刚复制的<code>ID</code><br>有两个结果，点开第一个（根据文件名猜测第一个有可能）</p>
+<p>如下图左，定位到<code>ID</code>所在位置，发现该<code>ID</code>在一个绝对布局里，向上找到该布局的<code>ID</code>复制</p>
+<h2><a href="#zhao-guan-jian-pan-duan" class="header-anchor">☺</a><span id="zhao-guan-jian-pan-duan">找关键判断</span></h2><p><img src="./3.png" alt="吾爱破解 - 涛之雨"><br>如上中图，到<code>dex</code>中搜索该<code>ID</code></p>
+<blockquote>
+<p>此处建议下拉框里选择<code>数字</code>格式，并勾选<code>16进制</code>，可以大大缩短搜索时间</p>
+</blockquote>
+<p>如上右图，只有一个赋值语句，点击下面的那个方法</p>
+<p>转java，如下图左，<code>ID</code>对应的布局赋值给了<code>参数Q</code><br><img src="./4.png" alt="吾爱破解 - 涛之雨"><br>如上图中，搜索<code>this.Q</code>参数，在<code>方法H</code>中，且在该行最后有一个<a href="https://baike.baidu.com/item/%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/1394210#1" target="_blank" rel="noopener">【三元运算符】（又称：冒号表达式）</a><br>设置了关键布局的显示与否。前面的<code>GoogleSubscriptionUtil.a</code>就是突破口了<br>如上图右，导航中选择<code>H方法</code>（不清楚请点击<a href="这里差个链接">【这里】</a>）</p>
+<h2><a href="#chang-shi-xiu-gai" class="header-anchor">☺</a><span id="chang-shi-xiu-gai">尝试修改</span></h2><p>如下图左上，点击该处，跳转到如下图左下所示的<code>GoogleSubscriptionUtil.a</code>定义处。</p>
+<p><img src="./5.png" alt="吾爱破解 - 涛之雨"><br>如下图左下，转java有两个赋值不知道为啥是键盘状态下标（SubscriptFlag4Keyboard）反正是个<code>bool</code>的布尔值。</p>
+<p>我们需要批量替换所有赋值的语句。<br>把形如</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">put-boolean 寄存器, <span class="class">Lnet/momentcam/aimee/utils/GoogleSubscriptionUtil;</span>-&gt;a:Z</span><br></pre></td></tr></table></figure>
+<p>的赋值语句前面插入一句赋值<code>寄存器</code>为1，</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const 寄存器,1</span><br><span class="line"><span class="comment"># 理论上应该是const/4 寄存器,0x1</span></span><br><span class="line"><span class="comment"># 为了省事可以如上简写</span></span><br><span class="line">put-boolean 寄存器, <span class="class">Lnet/momentcam/aimee/utils/GoogleSubscriptionUtil;</span>-&gt;a:Z</span><br></pre></td></tr></table></figure>
+
+<p>祭出我们的神器：正则替换（介绍参见<a href="https://baike.baidu.com/item/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1700215?fr=aladdin#1" target="_blank" rel="noopener">【正则表达式】</a>）</p>
+<blockquote>
+<p>mt管理器的正则替换基于java，支持<code>$1</code>替换（数字递增）<br>顺便说一句，SciTE库的 正则替换是使用<code>\1</code>替换（数字递增）</p>
+</blockquote>
+<p>构建匹配的方法，很简单，遇到<a href="https://www.runoob.com/regexp/regexp-metachar.html" target="_blank" rel="noopener">元字符</a>就加转义，把寄存器的部分用<code>(.*?)</code>替换，待匹配即可</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">put-boolean (.*?), <span class="class">Lnet/momentcam/aimee/utils/GoogleSubscriptionUtil;</span>-&gt;a:Z</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：此处的问号是非贪婪匹配。。。不然会匹配尽量长的部分（还好没有匹配换行。。。）</p>
+</blockquote>
+<p>如上图中，匹配到了dex内所有的赋值。</p>
+<blockquote>
+<p><font color="Cyan">注意勾选 <strong>“使用正则表达式”</strong></font></p>
+</blockquote>
+<p>点击替换，使用表达式</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const $1,1\nsput-boolean $1, <span class="class">Lnet/momentcam/aimee/utils/GoogleSubscriptionUtil;</span>-&gt;a:Z</span><br></pre></td></tr></table></figure>
+<p>如上图右，点开dex即可发现所有的赋值都被替换成了需要的形式。</p>
+<h2><a href="#ce-shi-xiao-guo" class="header-anchor">☺</a><span id="ce-shi-xiao-guo">测试效果</span></h2><p><img src="./6.png" alt="吾爱破解 - 涛之雨"></p>
+<p>如上图左、上图中，VIP的提示和VIP右下角标也不见了。<br>可是再尝试后发现，如上图左中间<code>HD</code>图片下载不了。</p>
+<p>点击<code>HD</code>按钮后，如上图右，需要付费ヽ(#`Д´)ﾉ</p>
+<blockquote>
+<p>注：如果没有所需的网络环境不会弹出付费窗口，直接显示错误</p>
+</blockquote>
+<h1><a href="#qu-nei-gou" class="header-anchor">☺</a><span id="qu-nei-gou">去内购</span></h1><h2><a href="#que-ding-cuo-wu-dan-chuang-wei-zhi" class="header-anchor">☺</a><span id="que-ding-cuo-wu-dan-chuang-wei-zhi">确定错误弹窗位置</span></h2><p>弹窗的内容是<code>支付失败</code>，到<code>ares</code>中搜索，<br>如下图左上，有两处。<br>为了确定哪一处是此处的弹窗，改成不一样的，再次测试。<br>此处我改的是一个是<code>支付失败1</code>一个是<code>支付失败2</code>至于为什么两个都要改，因为如果两个都改了结果却还是弹出<code>支付失败</code>的话就要考虑是不是服务器验证了。</p>
+<p><img src="./7.png" alt="吾爱破解 - 涛之雨"></p>
+<p>如上图左下，成功定位到是第一个<code>支付失败</code>，复制其<code>ID</code>。<br>如上图中，dex搜索，发现除去第一个变量，其余有四处调用该弹窗。<br>如上图右，点开后发现该调用上面没有判断<code>if-xx</code>，说明该方法是判断完失败后才调用的。</p>
+<h2><a href="#fen-xi-pan-duan" class="header-anchor">☺</a><span id="fen-xi-pan-duan">分析判断</span></h2><p><img src="./8.png" alt="吾爱破解 - 涛之雨"><br>如上图左，转java，此类里有只有一个成功和一个失败的方法，且用<code>public</code>修饰，<br>如上图中上，复制该类名，全dex搜索该类名，查看调用<br>如上图中下，除了该类本身，只有一个类调用。<br>如上图右，点开转java，找到刚才搜索的类（<code>PayHD</code>）<br>有两个判断，如果<code>SnareaPreterencesManagel.a().a(E(),false)</code>是空，就调用<code>s</code>方法（应该是支付的方法），如果<code>bool值</code>是<code>false</code>的话，弹出错误弹窗。<br>因此直接改其值为<code>1</code>即可。</p>
+<h2><a href="#yi-ci-xiu-gai" class="header-anchor">☺</a><span id="yi-ci-xiu-gai">依次修改</span></h2><p><img src="./9.png" alt="吾爱破解 - 涛之雨"></p>
+<p>因为四个类的判断不相同，<br>如上图自上至下，依次去更改对于<code>SnareaPreterencesManagel.a().a(E(),false)</code>返回值的判断<br>注意的是代码的格式不相同，改的时候也要注意不是都删掉判断</p>
+<blockquote>
+<p>注：笔者更习惯加上#，注释掉，方便二次修改和恢复。<br>cartoonshare类和randomcartoon类需要特别注意，一个是有两层判断（就是上面的例子），一个是需要改成<code>goto</code></p>
+</blockquote>
+<p>至此，完成完美破解。</p>
+<div id="Attachment"></div>
+
+<h1><a href="#fu-jian" class="header-anchor">☺</a><span id="fu-jian">附件</span></h1><h2><a href="#mthook-hou-de-wen-jian" class="header-anchor">☺</a><span id="mthook-hou-de-wen-jian">mtHOOK后的文件</span></h2><p>mt一键HOOK签名后apk中有改动的文件，解压后直接复制到apk签名即可过签名验证</p>
+<blockquote>
+<p><a href="http://t.cn/A6ZAof4i" target="_blank" rel="noopener">http://t.cn/A6ZAof4i</a><br>密码：<code>@52pojie.cn</code></p>
+</blockquote>
+<h2><a href="#yuan-bao" class="header-anchor">☺</a><span id="yuan-bao">原包</span></h2><p>原件的不限速下载链接</p>
+<blockquote>
+<p>原包<a href="http://d0.ananas.chaoxing.com/download/173c241167d0c9a12448905315a4dd9d" target="_blank" rel="noopener">CX不限速下载</a></p>
+</blockquote>
+<h2><a href="#xiu-gai-hou-de-demo" class="header-anchor">☺</a><span id="xiu-gai-hou-de-demo">修改后的demo</span></h2><p>修改后的demo版本（经过混淆加密，未加固）<br>因为超过100MB，精简了lib，分成两个apk，如果不知道你该下载哪一个，可以<a href="https://blog.csdn.net/liangtianmeng/article/details/82879848" target="_blank" rel="noopener">【点这里】</a>查看详细区别和说明，如果不想看，可以直接点第一个<code>armeabi-v7a</code>，如果打不开，则更换第二个</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">链接</th>
+<th align="center">密码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">armeabi-v7a</td>
+<td align="center"><a href="https://www.lanzous.com/ialjnra" target="_blank" rel="noopener">https://www.lanzous.com/ialjnra</a></td>
+<td align="center">密码:<code>gqv2ae</code></td>
+</tr>
+<tr>
+<td align="center">arm64-v8</td>
+<td align="center"><a href="https://www.lanzous.com/ialjmqd" target="_blank" rel="noopener">https://www.lanzous.com/ialjmqd</a></td>
+<td align="center">密码:<code>e1ca0</code></td>
+</tr>
+</tbody></table>
+
+  </article>
+
+  
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="bottom-outer">
+  
+  <div id="bottom-inner">
+    涛之雨 
+    ©2020 |Powered by  
+    <a href="http://hexo.io" target="_blank">Hexo</a>
+  </div>
+    
+    
+     
+
+
+  
+  
+    <script src="/js/legend.js"></script>
+  
+
+
+</body>
+</html>
+
+
+<script>
+$(window).on('load', function(){
+   $('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
+   prettyPrint();
+ });
+</script>
+
+
+
+<div id="social-about">
+
+
+
+
+</div>

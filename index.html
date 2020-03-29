@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 <!doctype html>
 <html lang="zh-CN">
 
@@ -29,6 +20,13 @@ src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
   
 <meta name="generator" content="Hexo 4.2.0"></head>
 
+
+
+
+
+
+
+
 <body id="body-home-bg">
 <div id="layout-content">
   
@@ -37,7 +35,7 @@ src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
     
     
     <div id="site-title">
-      涛之雨的小站
+      <a href="/">涛之雨的小站</a>
     </div>
     
 
@@ -61,31 +59,62 @@ src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
       
   
 
-<video id="bgvideo" playsinline autoplay muted loop poster=/images/background.png >
+<style>
+.htmleaf-container{
+	margin: 0 auto;
+}
+</style>
+<link rel="stylesheet" href="/css/jquery.vidbacking.min.css" type="text/css">
+<script src="/js/jquery.vidbacking.min.js" type="text/javascript"></script>
+<div class="htmleaf-container">
+<video id="bgvideo" playsinline autoplay muted loop class="vidbacking" poster=/images/background.png >
 <source type="video/mp4" src="https://v.weishi.qq.com/shg_1047_1047_0bf2p4aa2aaazqajtd3jmrpbo7yebvuaacka.f30.mp4?t="  >
-</video>
+</video>	
+</div>
+<script src="/js/d-toast.min.js" type="text/javascript"></script>
 <script>
-//$("#bgvideo")[0].children[0].src="https://v.weishi.qq.com/shg_1047_1047_0bf2p4aa2aaazqajtd3jmrpbo7yebvuaacka.f30.mp4?t="+new Date().getTime();
-//$("#bgvideo")[0].play()
+var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+  if (isChrome) {
+			//仿桌面通知
+			new dToast({
+				title:"友情提醒：",//通知标题部分
+				body:"您的浏览器是Chrome。。。如果您是第一次打开本站，或许需要点击右上角的【首页】才能获得最佳体验",//通知内容部分
+				inner:true, // 是浏览器仿桌面通知 否首选桌面通知 默认否 可选
+				onclick:function(data){ //监听点击通知   data:可传递参数 可选
+					alert("点我干嘛");
+				},
+				data:"我是仿桌面通知的参数",//可传递参数 可选
+				timeout:5000
+			});
+  }
+$("body").ondragstart="return false;";
+        $(function(){
+            $('body').vidbacking();
+        });
+    </script>
 
-</script>
 
 
 
-
-  
+  <style>
+#play-button{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+</style>
 <div id="play-button" >
   <img id="play-img" src="/images/playback_pause.png"></img>
 </div>
 <audio id="bgaudio" autoplay loop="loop" preload="auto"> 
   <source type="audio/mpeg"  src="https://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.m4a?v=" >
-  <script>
-//$("#bgaudio")[0].children[0].src="https://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.m4a?v="+new Date().getTime();
-//$("#bgaudio")[0].play();
-</script>
 </audio>
 
  <script>
+ $('img').on('mousedown',function (e) {
+    e.preventDefault()
+})
 $(document).ready(function(){
   //播放按钮点击
   var audio = $("#bgaudio")[0];

@@ -73,6 +73,33 @@ src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
 </div>
 <script src="/js/d-toast.min.js" type="text/javascript"></script>
 <script>
+document.querySelector('video').addEventListener('ended',(e)=>{
+	const dom = e.target
+	//防止劫持跳转广告
+	var ua = navigator.userAgent.toLocaleLowerCase();
+	//x5内核
+	if (ua.match(/tencenttraveler/) != null || ua.match(/qqbrowse/) != null) {
+		dom.play();
+		setTimeout(() => {
+			dom.pause();
+		}, 100)
+	}
+})
+var ua = navigator.userAgent.toLocaleLowerCase()
+// x5内核
+if (ua.match(/tencenttraveler/) != null || ua.match(/qqbrowse/) != null) {	
+	document.querySelector('video').setAttribute('x-webkit-airplay', true);
+	document.querySelector('video').setAttribute('x5-playsinline', true);
+	document.querySelector('video').setAttribute('webkit-playsinline', true);
+	document.querySelector('video').setAttribute('playsinline', true);
+	// x5内核 启用同层H5播放器（会有黑屏缓冲问题）
+	document.querySelector('video').setAttribute('x5-video-player-type', 'h5');
+	document.querySelector('video').setAttribute('x5-video-player-fullscreen', true);
+} else {
+	// ios端
+	document.querySelector('video').setAttribute('webkit-playsinline', true);
+	document.querySelector('video').setAttribute('playsinline', true);
+}
 var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
   if (isChrome) {
 			//仿桌面通知

@@ -80,9 +80,6 @@ document.querySelector('video').addEventListener('ended',(e)=>{
 	//x5内核
 	if (ua.match(/tencenttraveler/) != null || ua.match(/qqbrowse/) != null) {
 		dom.play();
-		setTimeout(() => {
-			dom.pause();
-		}, 100)
 	}
 })
 var ua = navigator.userAgent.toLocaleLowerCase()
@@ -92,9 +89,6 @@ if (ua.match(/tencenttraveler/) != null || ua.match(/qqbrowse/) != null) {
 	document.querySelector('video').setAttribute('x5-playsinline', true);
 	document.querySelector('video').setAttribute('webkit-playsinline', true);
 	document.querySelector('video').setAttribute('playsinline', true);
-	// x5内核 启用同层H5播放器（会有黑屏缓冲问题）
-	document.querySelector('video').setAttribute('x5-video-player-type', 'h5');
-	document.querySelector('video').setAttribute('x5-video-player-fullscreen', true);
 } else {
 	// ios端
 	document.querySelector('video').setAttribute('webkit-playsinline', true);

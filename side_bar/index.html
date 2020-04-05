@@ -1,0 +1,214 @@
+
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+<script src="/js/d-toast.min.js" type="text/javascript"></script>
+<script src="/js/spin-image.min.js" type="text/javascript"></script>
+
+<link href=  "/plugins/code-theme/tomorrow-night.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="/plugins/github-markdown.css">
+<link rel="stylesheet" href="/css/spin.min.css">
+
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+  <title>
+  书签侧边栏_PRO|
+  
+  涛之雨的小站</title>
+  
+    
+    
+      <link rel="stylesheet" href="/css/legend.css">
+    
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+
+
+
+<body id="body-x">
+<div id="loading" style="width: 100%;height: 100%;position: fixed;background-color: rgba(0,0,0,0.8);"></div>
+    <script type="text/javascript">        
+        //opts 可从网站在线制作
+        
+  var opts = {
+  innerImage: {url: '/images/logo.png', width: 100, height: 100 }, //内部图片    
+  lines: 14, // The number of lines to draw
+  length: 50, // The length of each line
+  width: 34, // The line thickness
+  radius: 84, // The radius of the inner circle
+  scale: 0.85, // Scales overall size of the spinner
+  corners: 1, // Corner roundness (0..1)
+  color: '#05eefa', // CSS color or array of colors
+  fadeColor: '', // CSS color or array of colors
+  speed: 1, // Rounds per second
+  rotate: 0, // The rotation offset
+  animation: 'spinner-line-shrink', // The CSS animation name for the lines
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  className: 'spinner', // The CSS class to assign to the spinner
+  top: '50%', // Top position relative to parent
+  left: '50%', // Left position relative to parent
+  shadow: '0 0 10px', // Box-shadow for the lines
+  position: 'relative', // Element positioning
+            trail: 60, // 花瓣旋转时的拖影(百分比)
+            hwaccel: true, //spinner 是否启用硬件加速及高速旋转      
+            progress: true,      // show progress tracker
+            progressTop: 0,       // offset top for progress tracker
+            progressLeft: 0       // offset left for progress tracker
+};
+        var spinner = new Spinner(opts);
+                    var target = $("#loading")[0];
+                    spinner.spin(target);
+window.onload=function(){
+spinner.spin();
+$("#loading")[0].style.display="none";
+}
+        
+    </script>
+<div id="layout-content">
+  
+<div id="menu-outer-x">
+  <div id="menu-inner">
+    
+    
+    <div id="site-title">
+      <a href="/">涛之雨的小站</a>
+    </div>
+    
+
+     
+    <div>
+    
+      
+      <a href="/">首页</a>
+      
+    
+      
+      <a href="/chaoxing">chaoxing脚本</a>
+      
+    
+    </div>
+  </div>
+</div> 
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  <article class="markdown-body">
+    <h2 id="post-title">书签侧边栏_PRO
+      
+    </h2>
+    <p>目录：</p>
+<div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#cha-jian-jie-shao">插件介绍</a><ul>
+<li><a href="#google-chrome">Google Chrome</a></li>
+<li><a href="#shi-yong-jie-tu">使用截图</a></li>
+</ul>
+</li>
+<li><a href="#cha-jian-de-an-zhuang">插件的安装</a><ul>
+<li><a href="#xia-zai">下载</a></li>
+<li><a href="#an-zhuang-jiao-cheng">安装教程</a><ul>
+<li><a href="#chrome-liu-lan-qi-and-xin-edge-liu-lan-qi">Chrome 浏览器 AND 新 Edge 浏览器</a></li>
+<li><a href="#qi-ta-liu-lan-qi-ru-uc-360-qq-deng">其他浏览器，如UC，360，QQ等</a></li>
+</ul>
+</li>
+<li><a href="#pei-zhi">配置</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<p>吾爱破解论坛分会场：<a href="https://www.52pojie.cn/thread-1149425-1-1.html" target="_blank" rel="noopener">https://www.52pojie.cn/thread-1149425-1-1.html</a></p>
+<h1><a href="#cha-jian-jie-shao" class="header-anchor">☺</a><span id="cha-jian-jie-shao">插件介绍</span></h1><h2><a href="#google-chrome" class="header-anchor">☺</a><span id="google-chrome">Google Chrome</span></h2><p>软件原链接：<a href="https://chrome.google.com/webstore/detail/bookmark-sidebar/jdbnofccmhefkmjbkkdkfiicjkgofkdh?hl=zh-CN" target="_blank" rel="noopener">点我访问</a>（需要正常的上网环境）</p>
+<p>Google Chrome 商店的介绍：</p>
+<blockquote>
+<p>在浏览器视图区左侧添加固定式的，管理所有书签的侧边栏。<br> -  -  注意  -  -  -<br>由于安全限制，侧边栏在chrome网站商店中不起作用。 因此，要打开侧边栏，只需导航到另一个网站，一切正常即可:)<br>-——————–<br>从Chrome v61开始，该扩展程序不再在默认的新标签页上运行。 我添加了一个备用页面，您可以在扩展程序设置中启用该页面。<br>-——————–</p>
+<p>此扩展名使您可以通过单击屏幕左侧来访问书签。 您可以通过拖放来编辑，删除或重新排列书签，并只需用鼠标左键单击即可查看有关它们的一些信息。 您也可以检查书签中的更新或损坏的URL。<br>如果您发现错误，对功能或改进有想法，请告诉我。</p>
+<p>翻译来自<a href="https://translate.google.cn" target="_blank" rel="noopener">谷歌翻译</a></p>
+</blockquote>
+<p>注：当前版本支持左侧或是右侧显示。</p>
+<h2><a href="#shi-yong-jie-tu" class="header-anchor">☺</a><span id="shi-yong-jie-tu">使用截图</span></h2><p><strong>警告！当前插件会消耗系统的内存（不是很大），请务必考虑系统的运转情况再使用！</strong><br><strong>（当然也可以先试用，如果系统耗能过大再卸载，取决于收藏的个数）</strong></p>
+<p>使用效果图：<br>（可以自行更改显示效果，支持css）<br><img src="/side_bar/1.png" alt="吾爱破解 - 涛之雨"></p>
+<p>基本设置：<br><img src="/side_bar/2.png" alt="吾爱破解 - 涛之雨"></p>
+<p>显示设置：<br><img src="/side_bar/3.png" alt="吾爱破解 - 涛之雨"></p>
+<p>插件信息：<br><img src="/side_bar/4.png" alt="吾爱破解 - 涛之雨"></p>
+<p>PRO特权（主要修改）：<br><img src="/side_bar/5.png" alt="吾爱破解 - 涛之雨"></p>
+<h1><a href="#cha-jian-de-an-zhuang" class="header-anchor">☺</a><span id="cha-jian-de-an-zhuang">插件的安装</span></h1><h2><a href="#xia-zai" class="header-anchor">☺</a><span id="xia-zai">下载</span></h2><blockquote>
+<p>下载链接：<br>书签侧边栏_插件（含教程链接）.zip<br><a href="https://www.lanzous.com/ib156wf" target="_blank" rel="noopener">https://www.lanzous.com/ib156wf</a><br>密码:吾</p>
+<p>书签侧边栏_插件.zip<br><a href="https://www.lanzous.com/ib14z8j" target="_blank" rel="noopener">https://www.lanzous.com/ib14z8j</a><br>密码:爱破</p>
+<p>书签侧边栏_插件.crx<br><a href="https://www.lanzous.com/ib14zbc" target="_blank" rel="noopener">https://www.lanzous.com/ib14zbc</a><br>密码:解论</p>
+</blockquote>
+<h2><a href="#an-zhuang-jiao-cheng" class="header-anchor">☺</a><span id="an-zhuang-jiao-cheng">安装教程</span></h2><h3><a href="#chrome-liu-lan-qi-and-xin-edge-liu-lan-qi" class="header-anchor">☺</a><span id="chrome-liu-lan-qi-and-xin-edge-liu-lan-qi">Chrome 浏览器 AND 新 Edge 浏览器</span></h3><ol>
+<li>直接下载<code>书签侧边栏_插件.zip</code>文件</li>
+<li>地址栏访问<code>chrome://extensions/</code></li>
+<li>开启右侧的<code>开发者模式</code>，按 F5 刷新一下</li>
+<li>拖动<code>书签侧边栏_插件.zip</code>到扩展页面中即可（安装成功忽略5）</li>
+<li>第4步如果失败，解压<code>书签侧边栏_插件.zip</code>到某个不易移动的文件夹 ,拖动刚才解压的扩展程序文件夹到扩展页面中即可<div id="notip"></div></li>
+<li>如果新版的Chrome浏览器经常弹出如下图所示的提示<br><img src="/side_bar/6.png" alt="吾爱破解 - 涛之雨"><br>可以下载<code>version.dll</code>文件，扔到Chrome的软件根目录即可<br><img src="/side_bar/7.png" alt="吾爱破解 - 涛之雨"><blockquote>
+<p>感谢<a href="https://shuax.com/project/chrome/" target="_blank" rel="noopener">耍下</a>提供的劫持补丁</p>
+</blockquote>
+</li>
+</ol>
+<h3><a href="#qi-ta-liu-lan-qi-ru-uc-360-qq-deng" class="header-anchor">☺</a><span id="qi-ta-liu-lan-qi-ru-uc-360-qq-deng">其他浏览器，如UC，360，QQ等</span></h3><p>直接下载<code>书签侧边栏_插件.crx</code>拖动到扩展页面中即可</p>
+<p>拖入的截图如下：<br><img src="/side_bar/8.png" alt="吾爱破解 - 涛之雨"></p>
+<h2><a href="#pei-zhi" class="header-anchor">☺</a><span id="pei-zhi">配置</span></h2><p>安装成功后一般会自动弹出插件的配置窗口。<br>如下图所示<br><img src="/side_bar/9.png" alt="吾爱破解 - 涛之雨"><br>可以根据自己的喜好选择，<br>也可以直接关闭书签，直接导入我提供的设置文件<br>（当然如果直接使用默认或是稍后自行修改也行）<br>在设置的<code>export</code>页面导入即可。</p>
+
+  </article>
+
+  
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="bottom-outer">
+  
+  <div id="bottom-inner">
+    涛之雨 
+    ©2020 |Powered by  
+    <a href="http://hexo.io" target="_blank">Hexo</a>
+  </div>
+    
+    
+     
+
+
+  
+  
+    <script src="/js/legend.js"></script>
+  
+
+
+
+<script>
+$(window).on('load', function(){
+   $('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
+   prettyPrint();
+ });
+</script>
+</body>
+</html>
+
+
+
+
+<div id="social-about">
+
+
+
+
+</div>

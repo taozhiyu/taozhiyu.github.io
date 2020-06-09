@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding-top: 50px;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+.container-fluid {
+  height: 100%;
+}
+
+.row-fluid {
+  height: 100%;
+}
+.main {
+  padding: 20px;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.main .page-header {
+  margin-top: 0;
+}
+
+
+.margintb-6 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.form-control > span{
+  cursor: pointer;
+}

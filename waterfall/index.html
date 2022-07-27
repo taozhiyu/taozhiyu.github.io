@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>css自适应瀑布流demo</title>
+        <style type="text/css">
+            .item {
+                column-gap: 22px;
+                max-width: 1500px;
+                column-count: 4;
+            }
+
+            @media only screen and (max-width: 1904px) {
+                .item {
+                    column-count: 4;
+                }
+            }
+
+            @media only screen and (max-width: 1264px) {
+                .item {
+                    column-count: 3;
+                }
+            }
+
+            @media only screen and (max-width: 960px) {
+                .item {
+                    column-count: 2;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                .item {
+                    column-count: 1;
+                    column-gap: 0;
+                }
+            }
+
+            .item>.item__content {
+                text-align: center;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="item">
+            <div class="item__content">1</div>
+            <div class="item__content">2</div>
+            <div class="item__content">3</div>
+            <div class="item__content">4</div>
+            <div class="item__content">5</div>
+            <div class="item__content">6</div>
+            <div class="item__content">7</div>
+            <div class="item__content">8</div>
+            <div class="item__content">9</div>
+            <div class="item__content">10</div>
+            <div class="item__content">11</div>
+            <div class="item__content">12</div>
+            <div class="item__content">13</div>
+            <div class="item__content">14</div>
+            <div class="item__content">15</div>
+            <div class="item__content">16</div>
+            <div class="item__content">17</div>
+            <div class="item__content">18</div>
+        </div>
+        <script type="text/javascript">
+        	// 修改随机颜色为了看起来更清楚，
+          // 修改随机高度为了占位
+            [...document.querySelectorAll(".item__content")].map(a=>{
+                a.style.background = "#" + Math.random().toString(16).slice(2, 8)
+                //随机颜色
+                a.style.height = Math.floor(50 + Math.random() * 500) + "px"
+                //随机高度
+            }
+            )
+        </script>
+    </body>
+</html>
